@@ -169,7 +169,7 @@ export default function Valentine() {
                 onMouseEnter={handleNoInteraction}
                 onClick={handleNoInteraction}
                 onTouchStart={handleNoInteraction}
-                className="px-8 py-3 bg-[#e9ecef] text-[#495057] rounded-xl font-bold transition-colors"
+                className="px-8 py-3 bg-[#e9ecef] border-2 border-black text-[#495057] rounded-xl font-bold transition-colors"
                 style={{
                   position: isMoved ? "fixed" : "relative",
                   left: isMoved ? noPosition.x : "auto",
