@@ -3,13 +3,15 @@ import { v } from "convex/values";
 import { action } from "./_generated/server";
 import { Resend } from "resend";
 
+declare const process: any;
+
 export const send = action({
   args: {
     toEmail: v.string(),
     link: v.string(),
     senderName: v.optional(v.string()),
   },
-  handler: async (ctx, args) => {
+  handler: async (_ctx, args) => {
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
       throw new Error(
