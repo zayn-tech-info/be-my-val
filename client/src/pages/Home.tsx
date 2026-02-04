@@ -58,9 +58,9 @@ export default function Home() {
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
       {/* Background Blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#ffccd5] rounded-full mix-blend-multiply filter blur-[80px] opacity-60 animate-blob"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-[#ffe5ec] rounded-full mix-blend-multiply filter blur-[80px] opacity-60 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-[#fff0f3] rounded-full mix-blend-multiply filter blur-[80px] opacity-60 animate-blob animation-delay-4000 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-125 h-125 bg-[#ffccd5] rounded-full mix-blend-multiply filter blur-[80px] opacity-60 animate-blob"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-150 h-150 bg-background-end rounded-full mix-blend-multiply filter blur-[80px] opacity-60 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 w-100 h-100 bg-background-start rounded-full mix-blend-multiply filter blur-[80px] opacity-60 animate-blob animation-delay-4000 transform -translate-x-1/2 -translate-y-1/2"></div>
       </div>
 
       <motion.div
@@ -109,7 +109,7 @@ export default function Home() {
                 placeholder="Custom Message (e.g. 'Will you be my Valentine?')"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="input-modern min-h-[120px] resize-none"
+                className="input-modern min-h-30 resize-none"
               />
             </div>
 
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
 
             <div
-              className="bg-white/50 border border-white p-4 rounded-xl mb-6 break-all font-mono text-sm text-[#c9184a] select-all cursor-pointer hover:bg-white/80 transition-colors"
+              className="bg-white/50 border border-white p-4 rounded-xl mb-6 break-all font-mono text-sm text-primary-dark select-all cursor-pointer hover:bg-white/80 transition-colors"
               onClick={copyLink}
             >
               {link}
@@ -153,7 +153,7 @@ export default function Home() {
 
               <a
                 href={`mailto:${email}?subject=A Special Question For You 💌&body=Hey, I have something special to ask you: ${link}`}
-                className="w-full py-4 px-8 bg-white border-2 border-[#ffccd5] text-[#c9184a] rounded-2xl text-lg font-bold transition-all duration-300 hover:bg-[#fff0f3] hover:border-[#c9184a] text-center no-underline"
+                className="w-full py-4 px-8 bg-white border-2 border-[#ffccd5] text-primary-dark rounded-2xl text-lg font-bold transition-all duration-300 hover:bg-background-start hover:border-primary-dark text-center no-underline"
               >
                 Send via Email 📧
               </a>

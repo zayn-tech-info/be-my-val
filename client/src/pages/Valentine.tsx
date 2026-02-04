@@ -103,8 +103,8 @@ export default function Valentine() {
     <div className="min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden relative">
       {/* Background Blobs (duplicated for consistent feel, could be a component) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#ffccd5] rounded-full mix-blend-multiply filter blur-[80px] opacity-60 animate-blob"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-[#ffe5ec] rounded-full mix-blend-multiply filter blur-[80px] opacity-60 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-120 h-120 bg-[#ffccd5] rounded-full mix-blend-multiply filter blur-[80px] opacity-60 animate-blob"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-150 h-150 bg-background-end rounded-full mix-blend-multiply filter blur-[80px] opacity-60 animate-blob animation-delay-2000"></div>
       </div>
 
       <AnimatePresence mode="wait">
@@ -116,7 +116,7 @@ export default function Valentine() {
             className="glass-card p-12 text-center max-w-lg w-full z-10 rounded-3xl"
           >
             <div className="text-8xl mb-6 animate-bounce">🎉</div>
-            <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark mb-4">
+            <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-dark mb-4">
               YAY!
             </h1>
             <p className="text-2xl text-[#640d23] font-medium leading-relaxed">
@@ -137,7 +137,7 @@ export default function Valentine() {
               <img
                 src="/valentine-bear.png"
                 alt="Cute Bear"
-                className="w-full max-w-[300px] rounded-3xl shadow-xl border-4 border-white/50"
+                className="w-full max-w-75 rounded-3xl shadow-xl border-4 border-white/50"
               />
             </div>
 
@@ -151,10 +151,10 @@ export default function Valentine() {
               </p>
             )}
 
-            <div className="flex justify-center text-black font-medium items-center gap-6 mt-8 h-[100px] relative">
+            <div className="flex justify-center text-black font-medium items-center gap-6 mt-8 h-25 relative">
               <motion.button
                 onClick={handleYesClick}
-                className="btn-modern !w-auto !px-12 !py-4 text-2xl"
+                className="btn-modern w-auto px-12 py-4 text-2xl"
                 style={{
                   scale: yesScale,
                   zIndex: 20,
