@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", "sans-serif";
+
+  --color-primary: #ff4d6d;
+  --color-primary-dark: #c9184a;
+
+  --color-background-start: #fff0f3;
+  --color-background-end: #ffe5ec;
+
+  --animate-blob: blob 7s infinite;
+
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-background-start via-[#fff5f7] to-background-end min-h-screen text-[#4a0416] antialiased overflow-x-hidden;
+    font-family: var(--font-display);
+  }
+}
+
+@utility glass-card {
+  @apply bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_0_rgba(199,24,74,0.15)];
+}
+
+@utility text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#ff4d6d] to-[#a4133c];
+}
+
+@utility input-modern {
+  @apply w-full px-5 py-4 bg-white border-2 border-[#ffe5ec] rounded-2xl text-base text-[#640d23] transition-all duration-300 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 hover:-translate-y-0.5 focus:-translate-y-0.5 placeholder-[#ffb3c1];
+}
+
+@utility btn-modern {
+  @apply w-full py-4 px-8 bg-gradient-to-r from-primary to-primary-dark text-white rounded-2xl text-lg font-bold shadow-[0_10px_20px_-5px_rgba(201,24,74,0.4)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_-5px_rgba(201,24,74,0.5)] active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none;
+}
